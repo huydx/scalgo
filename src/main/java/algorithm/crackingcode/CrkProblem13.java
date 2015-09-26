@@ -21,7 +21,8 @@ public class CrkProblem13 {
     }
 
     public static void main(String[] args) {
-        char[] input = "abcd".toCharArray();
+        char[] input = "aaabbb".toCharArray();
         removeDuplicateChar(input);
+        System.out.println(input);
     }
 }
