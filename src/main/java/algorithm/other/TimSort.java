@@ -60,7 +60,7 @@ import java.util.Comparator;
  *
  * @author Josh Bloch
  */
-class TimSort<T> {
+public class TimSort<T> {
     /**
      * This is the minimum sized sequence that will be merged.  Shorter
      * sequences will be lengthened by calling binarySort.  If the entire
