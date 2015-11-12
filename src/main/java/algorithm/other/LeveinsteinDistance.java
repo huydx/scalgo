@@ -15,12 +15,12 @@ public class LeveinsteinDistance {
             for (int j = 1; j < len2; ++j) {
                 if (word1[i] == word2[j]) {
                     matrix[i][j] = matrix[i-1][j-1];
-                    //System.out.println("update matrix "+i+", "+j+" : "+ matrix[i][j]);
+                    System.out.println("update matrix "+i+", "+j+" : "+ matrix[i][j]);
                 } else {
                     int min = Math.min(matrix[i-1][j], matrix[i][j-1]);
                     min = Math.min(min, matrix[i-1][j-1]);
                     matrix[i][j] = min + 1;
-                    //System.out.println("update matrix "+i+", "+j+" : "+ matrix[i][j]);
+                    System.out.println("update matrix "+i+", "+j+" : "+ matrix[i][j]);
                 }
             }
         }
@@ -29,8 +29,8 @@ public class LeveinsteinDistance {
 
 
     public static void main(String[] args) {
-        String word1 = "foeo";
-        String word2 = "feee";
+        String word1 = "abcd";
+        String word2 = "dd";
         System.out.println(editDistance(word1.toCharArray(), word2.toCharArray()));
     }
 }
