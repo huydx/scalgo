@@ -1,4 +1,4 @@
-package other
+package algorithm
 
 import java.util
 import java.util.{Random, BitSet}

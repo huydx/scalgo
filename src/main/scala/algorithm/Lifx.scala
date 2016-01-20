@@ -1,4 +1,4 @@
-package other
+package algorithm
 
 object Lifx {
 //  trait Bytable { def tobyte(): Array[Byte] }

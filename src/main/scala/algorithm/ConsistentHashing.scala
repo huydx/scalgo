@@ -1,7 +1,7 @@
-package consistenthash
+package algorithm
 
-import java.security.MessageDigest
-import java.security.NoSuchAlgorithmException
+import java.security.{MessageDigest, NoSuchAlgorithmException}
+
 import scala.io.Source
 
 /*
