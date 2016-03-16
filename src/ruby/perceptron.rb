@@ -17,10 +17,10 @@ module TacosMachineLearning
     end
 
     def predict(dat)
-			dat.features.reduce(0) do |a, f|
+      dat.features.reduce(0) do |a, f|
         k, x = f
         (@w[k]) ? y + (@w[k]*x) : y
-			end
+      end
     end
 
     def train(fname)
