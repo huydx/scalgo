@@ -34,7 +34,7 @@ module TacosMachineLearning
       dats.each do |dat|
         y = predict(dat)
         next if (y*dat.label) > 0
-        update_weight(dat, y)
+        update_weight(dat, dat.label)
       end
       self
     end
@@ -67,7 +67,8 @@ module TacosMachineLearning
       c = 0.5
       dat.features.each_with_index do |f, idx|
         @w[idx] ||= 1
-        @w[idx] += c * y * f
+        jump =  c * y * f
+        @w[idx] += jump
       end
     end
   end
