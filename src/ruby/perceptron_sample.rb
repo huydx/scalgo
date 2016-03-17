@@ -7,11 +7,12 @@ module MachineLearning
     end
 
     def predict vector_x
-      count = 0
-      vector_x.reduce(0) do |y, v|
-        (w[k]) ? y + (w[k]*v) : y
-        count++
+      x = vector_x.reduce(0) do |y, v|
+        k, x = v
+        (w[k]) ? y + (w[k]*x) : y
       end
+      p x
+      x
     end
 
     def train vector_x, t
