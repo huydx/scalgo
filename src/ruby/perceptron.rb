@@ -39,10 +39,10 @@ module TacosMachineLearning
 
       File.open(fname) do |f|
         f.each do |line|
-          arr = line.split(",")
+          arr = line.strip!.split(",")
           label = arr.pop
           label = if (label == "Iris-setosa") then 1 else -1 end
-          arr = arr.map(&:to_i)
+          arr = arr.map(&:to_f)
           train << TrainDat.new(arr, label)
         end
       end
@@ -52,7 +52,7 @@ module TacosMachineLearning
 
     def update_weight(dat, y)
       dat.features.each_with_index do |f, idx|
-        @w[idx] ||= 0
+        @w[idx] ||= 1
         @w[idx] += y * f
       end
     end
