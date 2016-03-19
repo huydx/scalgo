@@ -40,14 +40,14 @@ module TacosMachineLearning
     end
 
     def loop_train!(fname)
-      dats = read!(fname)
+      dats = read(fname)
       (1..@num_trains).each do |i|
         train!(dats)
       end
       self
     end
 
-    def read!(fname)
+    def read(fname)
       train = []
 
       File.open(fname) do |f|
@@ -75,9 +75,13 @@ module TacosMachineLearning
 end
 
 machine = TacosMachineLearning::PerceptronMachine.new().loop_train!("traindata.txt")
-testdat1 = TacosMachineLearning::TrainDat.new([5.1,3.4,1.5,0.2], 1)
-testdat2 = TacosMachineLearning::TrainDat.new([5.9,3.0,5.1,1.8], 1)
 
-p machine
-p machine.predict(testdat1)
-p machine.predict(testdat2)
+##test
+dats = machine.read("traindata.txt")
+correct = 0
+dats.each do |dat|
+  predict = machine.predict(dat)
+  correct += 1 if predict == dat.label
+end
+
+p "correct prob : #{(correct / dats.length)*100} %"
