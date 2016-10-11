@@ -9,11 +9,11 @@ public class CrkProblem22 {
         LinkedListNode current = head;
         while (current.next != null) {
             LinkedListNode iterate = current.next;
-            //check for next nth value is null or not
+            //check for eat nth value is null or not
             //NOTE!!! not every time need to iterate all 1->n
             //just keep first and last nth node, and then increase both
             for (int i = 1; i <= n; i++) {
-                if (iterate.next == null && i != n) { //check iterate.next
+                if (iterate.next == null && i != n) { //check iterate.eat
                     throw new RuntimeException("list size below n");
                 } else if (i == n) {
                     if (iterate.next == null) return current;

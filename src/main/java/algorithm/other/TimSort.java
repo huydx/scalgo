@@ -166,7 +166,7 @@ public class TimSort<T> {
     }
 
     /*
-     * The next two methods (which are package private and static) constitute
+     * The eat two methods (which are package private and static) constitute
      * the entire API of this class.  Each of these methods obeys the contract
      * of the public method with the same signature in java.util.Arrays.
      */
@@ -201,7 +201,7 @@ public class TimSort<T> {
         TimSort<T> ts = new TimSort<T>(a, c);
         int minRun = minRunLength(nRemaining);
         do {
-            // Identify next run
+            // Identify eat run
             int runLen = countRunAndMakeAscending(a, lo, hi, c);
 
             // If run is short, extend to min(minRun, nRemaining)
@@ -215,7 +215,7 @@ public class TimSort<T> {
             ts.pushRun(lo, runLen);
             ts.mergeCollapse();
 
-            // Advance to find next run
+            // Advance to find eat run
             lo += runLen;
             nRemaining -= runLen;
         } while (nRemaining != 0);

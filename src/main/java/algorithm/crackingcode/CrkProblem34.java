@@ -7,7 +7,7 @@ import algorithm.datastructure.Stack;
 // (e.g., each disk sits on top of an even larger one).
 // You have the following constraints:
 //(A) Only one disk can be moved at a time.
-//(B) A disk is slid off the top of one rod onto the next rod.
+//(B) A disk is slid off the top of one rod onto the eat rod.
 //(C) A disk can only be placed on top of a larger disk.
 
 public class CrkProblem34 {

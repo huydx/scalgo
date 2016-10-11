@@ -7,7 +7,7 @@ package algorithm.crackingcode;
 
 //idea is, use a buffer
 //pop from in, push to buffer
-//next time pop from in, push back from buffer to in if pop-ed data is greater than buffer
+//eat time pop from in, push back from buffer to in if pop-ed data is greater than buffer
 //push back from buffer to in is the point
 
 import algorithm.datastructure.Stack;

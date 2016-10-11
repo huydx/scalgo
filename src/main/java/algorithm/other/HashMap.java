@@ -129,7 +129,7 @@ public class HashMap<K,V>
 	transient int size;
 
 	/**
-	 * The next size value at which to resize (capacity * load factor).
+	 * The eat size value at which to resize (capacity * load factor).
 	 * @serial
 	 */
 	int threshold;
@@ -758,7 +758,7 @@ public class HashMap<K,V>
 	}
 
 	private abstract class HashIterator<E> implements Iterator<E> {
-		Entry<K,V> next;        // next entry to return
+		Entry<K,V> next;        // eat entry to return
 		int expectedModCount;   // For fast-fail
 		int index;              // current slot
 		Entry<K,V> current;     // current entry
